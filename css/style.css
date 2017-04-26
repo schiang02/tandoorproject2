@@ -1,0 +1,32 @@
+h1 {
+  margin-left: 400px;
+}
+
+/*This section is the nav styles*/
+
+nav ul {
+  list-style-type: none;
+  background-color: white;
+  margin-left: 400px;
+  padding-right: 90px;
+}
+
+nav li {
+  display: inline;
+}
+
+nav a:link, nav a:visited {
+  background-color: white;
+  text-decoration: none;
+  font-size: 30px;
+  color: black;
+}
+
+nav a:hover {
+  background-color: lightgray;
+  text-decoration: none;
+}
+
+nav a.current{
+  background-color: white;
+}

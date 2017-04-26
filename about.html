@@ -1,0 +1,90 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Project 1: Mission Tandoor">
+    <meta name="author" content="Nicole Pavis and Sana Chiang">
+    <title>Misson Tandoor</title>
+    <!--///ZURB CSS///-->
+    <link rel="stylesheet" href="zurb/css/foundation.css" />
+    <!--///OWL CSS///-->
+    <link rel="stylesheet" href="owl/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="owl/dist/assets/owl.theme.default.min.css">
+    <!--///ZURB JS///-->
+    <script src="zurb/js/vendor/modernizr.js"></script>
+    <!--///OUR CSS///-->
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <header>
+      <section class="row">
+        <div class="large-12 columns">
+      <h1>Mission Tandoor</h1>
+      <nav>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="menu.html">Menu</a></li>
+        </ul>
+      </nav>
+    </div>
+  </section>
+    </header>
+
+    <section class="row">
+      <div class="large-12 columns">
+        <h1>Welcome!</h1>
+      </div>
+    </section>
+
+    <section class="row">
+      <div class="large-12 columns large-centered">
+        <div class="owl-carousel owl-theme">
+          <div><img src="img/slider/bird1.jpg" alt="Finch eating a white berry."></div>
+          <div><img src="img/slider/bird2.jpg" alt="Two birds eating a berry."></div>
+          <div><img src="img/slider/bird3.jpg" alt="Bird tossing berry."></div>
+          <div><img src="img/slider/bird4.jpg" alt="Bird eating a berry."></div>
+          <div><img src="img/slider/bird5.jpg" alt="Finch on a branch with a berry in it's mouth."></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="row">
+      <div class="large-12 columns">
+        <footer>
+          <p></p>
+        </footer>
+      </div>
+    </section>
+
+  <!--///OWL JS///-->
+    <script src="owl/docs/assets/vendors/jquery.min.js"></script>
+    <script src="owl/dist/owl.carousel.min.js"></script>
+  <!--///ZURB JS///-->
+    <script src="zurb/js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+    <script>
+      $(document).ready(function(){
+        var owl = $('.owl-carousel');
+        owl.owlCarousel({
+          items:1,
+          loop:true,
+          nav:true,
+          margin:10,
+          autoplay:true,
+          autoplayTimeout:2000,
+          autoplayHoverPause:true
+        });
+        $('.play').on('click',function(){
+          owl.trigger('play.owl.autoplay',[2000])
+        })
+        $('.stop').on('click',function(){
+          owl.trigger('stop.owl.autoplay')
+        })
+      });
+    </script>
+  </body>
+</html>
